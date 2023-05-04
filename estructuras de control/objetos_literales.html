@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literales</title>
+</head>
+<body>
+<h1>Objetos literales</h1>  
+<script>
+    //Objetos literales son objetos que definimos en una variable para luego usarlos.
+    let nombre = "Santiago",
+        edad = 12;
+
+    const hijo = {
+        nombre:nombre,
+        edad:edad,
+        hablar:function(){
+            console.log("Hola hola");
+        }
+    }
+     console.log(hijo);
+     hijo.hablar();
+
+    //Nuevas caracteristicas de objetos literales simplificando, si las propiedades del objeto se van a llamar igual a las variables y metodos resumidos.
+     const hijo2 = {
+         nombre,
+         edad,
+         sexo:"Masculino",
+         hablar(){
+            console.log("Hola hola holis");
+        }
+     } 
+      console.log(hijo2);
+      hijo2.hablar();
+</script>
+</body>
+</html>

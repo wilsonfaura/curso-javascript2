@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue</title>
+</head>
+<body>
+<h1>Break & Continue</h1> 
+<script>
+
+const numeros = [1,2,3,4,5,6,7,8,9,0]
+
+console.log("uso Break");
+for (let i = 0; i < numeros.length; i++) {    
+    if (i===5) {         
+        break;        
+    }
+    console.log(numeros[i]);       
+}
+
+console.log("uso Continue");
+for (let index = 0; index < numeros.length; index++) {    
+    if (index===5) {        
+        continue;
+    }
+    console.log(numeros[index]);    
+}
+
+console.log("uso continue para omitir numeros pares o impares");
+for (let i = 0; i < numeros.length; i++) {    
+    if ((i%2)==0) {        
+        continue;
+    }
+    console.log(numeros[i]);    
+}
+
+</script>
+</body>
+</html>

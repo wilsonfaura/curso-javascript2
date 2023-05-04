@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+<h1>Arrow Functions</h1>   
+<script>
+
+//Creamos una funcion expresada
+const saludar = function (nombre) {
+    console.log(`Hola ${nombre}`);    
+}
+saludar("Santiago");
+
+//Arrow functions: quitamos la palabra reservada function, cuando recibe solo un parametro podemos eliminar los parentesis, ademas podemos quitar la llaves si la funcion no cuenta con mas de una linea.
+const saludar1 = nombre => console.log(`Hola ${nombre}`);
+saludar1("Felipe");
+
+//Creamos una funcion expresada
+const sumar = function (a,b) {
+    return a + b;
+}
+console.log(sumar(8,9))
+
+//Arrow functions cuando esta vacia o recibe mas de un parametro conservamos los parentesisis
+const sumar1 = (a,b) => a + b;
+console.log(sumar1(8,166))
+
+const funcionDeVariasLineas = () =>{
+    console.log("uno");
+    console.log("dos");
+    console.log("tres");
+}
+funcionDeVariasLineas();
+
+const numeros = [1,2,3,4,5];
+numeros.forEach((el, index) => console.log(`${el} esta en la posicion ${index}`));
+
+function Perro(){
+    console.log(this);
+}
+Perro();
+
+
+//Al usar arrow function para metodos dentro de un objeto no respeta el contexto del objeto y toma el contexto del objeto global
+const perro = {
+    nombre:"Kenai",
+    ladrar: function(){
+        console.log(this);
+    }
+}
+perro.ladrar();
+</script>
+</body>
+</html>

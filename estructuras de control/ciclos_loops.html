@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos Loops</title>
+</head>
+<body>
+ <h1>Ciclos o loops</h1>   
+ <script>
+  // while: solo se ejecutan las instrucciones del bloque cuando se cumple la condicion.
+
+    let contador = 0;
+    while (contador < 10) {
+        console.log("while " + contador);
+        contador++;      
+    }
+
+  // do - while: al menos ejecutamos una ves las instrucciones dentro del bloque.
+
+    do {
+        console.log("do while " + contador);
+        contador++;
+    } while (contador < 10);
+
+  // bucle for: mas facil de usar inicializamos, ponemos condicion e incremento dentro del mismo ciclo.
+
+    for (let i = 0; i < 10; i++) {
+        console.log("for " + i);      
+    }
+
+    let numeros = [10,20,30,40,50,60,70,80,90];
+     for(let i = 0; i<numeros.length; i++){
+         console.log("for " + numeros[i]);
+    }
+
+  // for - in: se usa mas para recorrer objetos primitivos
+
+    const wilson = {
+    nombre:"Wilson",
+    apellido:"Faura",
+    edad:37
+    }
+
+    for (const propiedad in wilson) {
+        console.log(`${propiedad}: ${wilson[propiedad]}`);
+    }
+
+  // for - of: se usa mas para recorrer arreglos o cadenas de texto
+
+    let numerosForOf = [10,20,30,40,50,60,70,80,90];
+    for (const elemento of numerosForOf) {
+        console.log(elemento);
+    }
+
+    let cadena = ("Hola mundo ciclo for of");  
+    for (const caracter of cadena) {
+        console.log(caracter);
+    }
+  
+ </script>
+</body>
+</html>
