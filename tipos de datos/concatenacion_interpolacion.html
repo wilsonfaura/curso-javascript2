@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concatenacion e interpolación</title>
+</head>
+<body>
+<h1>Concatenacion e interpolacion </h1>
+<script>
+
+let nombre="Wilson";
+let apellido="Faura";
+
+//concatenación
+let saludo ="Hola mi nombre es: " + nombre + " "+ apellido + ".";
+console.log(saludo);
+
+//interpolacion template String ``
+let saludo2 = `Hola mi nombre es: ${nombre} ${apellido}.`;
+console.log(saludo2);
+
+let ul = "<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+console.log(ul);
+
+let ul2 = "<ul>";
+    ul2 += "<li> Primavera</li>";
+    ul2 += "<li>Verano</li>";
+    ul2 += "<li>Otoño</li>";
+    ul2 += "<li>Invierno</li>";
+    ul2 += "</ul>";
+console.log(ul2);
+
+let ul3 = `<ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+</ul>`;
+console.log(ul3);
+
+</script> 
+</body>
+</html>

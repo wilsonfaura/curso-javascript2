@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+ <h1>Objetos</h1>   
+ <script>
+    let a = new String("Hola");
+    console.log(a);
+
+    const b = {}
+    console.log(b);
+
+    const c = new Object();
+    console.log(c);
+
+    /* dentro de un objeto las variables se llaman propiedades o atributos
+    y las funciones se van a denominar metodos*/
+    const wilson = {
+        nombre:"Wilson",
+        apellido:"Faura",
+        edad:35,
+        pasatiempos:["Programar", "Hacer ejercicio", "Ver peliculas"],
+        soltero: false,
+        contacto:{
+            email:"wilsonfaura10@hotmail.com",
+            twitter:"@wilson10",
+            movil:3214937857        
+        },
+        saludar:function(){
+            console.log(`hola:)`)
+        },
+        decirMiNombre:function(){
+            console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`)
+        }
+    }
+
+    console.log(wilson);
+    console.log(wilson["nombre"]);
+    console.log(wilson["apellido"]);
+    console.log(wilson.nombre);
+    console.log(wilson.apellido);
+    console.log(wilson.contacto);
+    console.log(wilson.soltero);
+    console.log(wilson.pasatiempos[0]);
+    console.log(wilson.contacto.twitter);
+    wilson.saludar();
+    wilson.decirMiNombre();
+
+    console.log(Object.keys(wilson));
+    console.log(Object.values(wilson));
+    console.log(wilson.hasOwnProperty("nombre"));
+    console.log(wilson.hasOwnProperty("nacimiento"));
+
+     
+ </script>
+</body>
+</html>
