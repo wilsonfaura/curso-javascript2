@@ -1,0 +1,1 @@
+console.log("Mi navegados no soporta +ES6");

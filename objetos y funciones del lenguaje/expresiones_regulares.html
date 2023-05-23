@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+</head>
+<body>
+<h1>Expresiones regulares</h1> 
+<script>
+/*https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+ https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_expressions
+ Expresiones regulares: Son una secuencia de caracteres que forman un patron de busqueda,
+ principalmente utilizado para la busqueda de patrones de cadenas de caracteres*/
+
+ let cadena = "señalar competencia señalar de los señalar ministerios señalar los 65 requisitos técnicos que deben cumplir las obras, equipos y procedimientos que utilicen las empresas de servicios públicos del sector, cuando la comisión respectiva haya resuelto por vía general que ese señalamiento es realmente necesario"
+
+let expReg = new RegExp("señalar", "ig");
+console.log(expReg.test(cadena));
+console.log(expReg.exec(cadena));
+
+let expReg2 = /señalar{1}/ig;
+console.log(expReg2.test(cadena));
+console.log(expReg2.exec(cadena));
+
+</script>
+</body>
+</html>

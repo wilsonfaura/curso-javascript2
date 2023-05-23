@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto console</title>
+</head>
+<body>
+<h1>Objeto console</h1>
+<script>
+
+console.log(console);
+console.error("esto es un error");
+console.warn("esto es un aviso");
+console.info("esto es un mensaje informativo");
+
+let nombre = "wilson",
+    apellido = "faura",
+    edad = 37;
+
+console.log(nombre);
+console.log(nombre);
+console.log(nombre);
+console.log(nombre, apellido, edad);
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+console.log(`Hola mi nombre es %s %s y tengo %d años`,nombre, apellido, edad);
+console.clear();
+console.log(window);
+console.log(document);
+console.dir(window);
+console.dir(document);
+console.clear();
+
+console.group("los cursosde @jhon mircha en youtube");
+console.log("curso de javascript");
+console.log("curso de node.js");
+console.log("curso de pwas");
+console.log("curso de javascript");
+console.log("curso de javascript");
+console.groupEnd();
+
+console.groupCollapsed("los cursosde @jhon mircha en youtube");
+console.log("curso de javascript");
+console.log("curso de node.js");
+console.log("curso de pwas");
+console.log("curso de javascript");
+console.log("curso de javascript");
+console.groupEnd();
+console.clear();
+
+console.log(console);
+console.table(Object.entries(console).sort());
+
+const numeros = [1,2,3,4,5],
+    vocales = ["a","e","i","o","u"];
+
+console.table(numeros);
+console.table(vocales);
+
+const perro = {
+    nombre:"jack",
+    raza:"Boxer",
+    color:"cafe"
+}
+console.table(perro);
+
+</script>   
+</body>
+</html>
